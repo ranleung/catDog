@@ -16,8 +16,8 @@ DerivedData
 *.hmap
 *.ipa
 *.
-Constants/Constants.h
-Constants/Constants.m
+Constants.h
+Constants.m
 
 # CocoaPods
 #
