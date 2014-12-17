@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "Constants.h"
 
 @interface AppDelegate ()
 
@@ -20,8 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    [Parse setApplicationId:@"HNyPQbAzZhFkMW7YZA1rXJybnHiJye4asnHc7MoI"
-                  clientKey:@"3kc0aZHbymNv0gMTm38ZQRT7aXrmhRxwF1KT6nGn"];
+    [Parse setApplicationId:kParseAppID
+                  clientKey:kParseClientKey];
     
     [PFFacebookUtils initializeFacebook];
     

@@ -31,6 +31,7 @@
 		70E3DB401A40FD4E009B1ED0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E3DB3F1A40FD4E009B1ED0 /* libsqlite3.dylib */; };
 		70E3DB431A4114CE009B1ED0 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3DB421A4114CE009B1ED0 /* LogInViewController.m */; };
 		70E3DB461A421C81009B1ED0 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3DB451A421C81009B1ED0 /* HomeViewController.m */; };
+		70E3DB4E1A42217E009B1ED0 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3DB4D1A42217E009B1ED0 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		70E3DB421A4114CE009B1ED0 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogInViewController.m; path = ../LogInViewController.m; sourceTree = "<group>"; };
 		70E3DB441A421C81009B1ED0 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		70E3DB451A421C81009B1ED0 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		70E3DB4C1A42217E009B1ED0 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		70E3DB4D1A42217E009B1ED0 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 		70E3DAF91A40FBF4009B1ED0 /* catDog */ = {
 			isa = PBXGroup;
 			children = (
+				70E3DB4C1A42217E009B1ED0 /* Constants.h */,
+				70E3DB4D1A42217E009B1ED0 /* Constants.m */,
 				70E3DB471A421C8A009B1ED0 /* Models */,
 				70E3DB4A1A421CA7009B1ED0 /* View Controllers */,
 				70E3DB491A421C9D009B1ED0 /* Controllers */,
@@ -332,6 +337,7 @@
 				70E3DB031A40FBF4009B1ED0 /* catDog.xcdatamodeld in Sources */,
 				70E3DB461A421C81009B1ED0 /* HomeViewController.m in Sources */,
 				70E3DAFD1A40FBF4009B1ED0 /* main.m in Sources */,
+				70E3DB4E1A42217E009B1ED0 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
