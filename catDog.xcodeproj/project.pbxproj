@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7076C6EA1A42279600927639 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076C6E71A42279600927639 /* FLAnimatedImage.m */; };
+		7076C6EB1A42279600927639 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076C6E91A42279600927639 /* FLAnimatedImageView.m */; };
+		7079C1281A42519900970528 /* Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = 7079C1271A42519900970528 /* Gif.m */; };
+		7079C12B1A4251BF00970528 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7079C12A1A4251BF00970528 /* NetworkController.m */; };
 		70E3DAFD1A40FBF4009B1ED0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3DAFC1A40FBF4009B1ED0 /* main.m */; };
 		70E3DB001A40FBF4009B1ED0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3DAFF1A40FBF4009B1ED0 /* AppDelegate.m */; };
 		70E3DB031A40FBF4009B1ED0 /* catDog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70E3DB011A40FBF4009B1ED0 /* catDog.xcdatamodeld */; };
@@ -45,6 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7076C6E61A42279600927639 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		7076C6E71A42279600927639 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		7076C6E81A42279600927639 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		7076C6E91A42279600927639 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		7079C1261A42519900970528 /* Gif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gif.h; sourceTree = "<group>"; };
+		7079C1271A42519900970528 /* Gif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gif.m; sourceTree = "<group>"; };
+		7079C1291A4251BF00970528 /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
+		7079C12A1A4251BF00970528 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
 		70E3DAF71A40FBF4009B1ED0 /* catDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E3DAFB1A40FBF4009B1ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70E3DAFC1A40FBF4009B1ED0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,10 +125,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7076C6E51A42279600927639 /* FLAnimatedImage */ = {
+			isa = PBXGroup;
+			children = (
+				7076C6E61A42279600927639 /* FLAnimatedImage.h */,
+				7076C6E71A42279600927639 /* FLAnimatedImage.m */,
+				7076C6E81A42279600927639 /* FLAnimatedImageView.h */,
+				7076C6E91A42279600927639 /* FLAnimatedImageView.m */,
+			);
+			name = FLAnimatedImage;
+			path = catDog/FLAnimatedImage;
+			sourceTree = "<group>";
+		};
 		70E3DAEE1A40FBF4009B1ED0 = {
 			isa = PBXGroup;
 			children = (
 				70E3DB4B1A421CD2009B1ED0 /* Framework */,
+				7076C6E51A42279600927639 /* FLAnimatedImage */,
 				70E3DAF91A40FBF4009B1ED0 /* catDog */,
 				70E3DB161A40FBF4009B1ED0 /* catDogTests */,
 				70E3DAF81A40FBF4009B1ED0 /* Products */,
@@ -177,6 +202,8 @@
 		70E3DB471A421C8A009B1ED0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7079C1261A42519900970528 /* Gif.h */,
+				7079C1271A42519900970528 /* Gif.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -193,6 +220,8 @@
 		70E3DB491A421C9D009B1ED0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7079C1291A4251BF00970528 /* NetworkController.h */,
+				7079C12A1A4251BF00970528 /* NetworkController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -333,7 +362,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E3DB431A4114CE009B1ED0 /* LogInViewController.m in Sources */,
+				7076C6EA1A42279600927639 /* FLAnimatedImage.m in Sources */,
 				70E3DB001A40FBF4009B1ED0 /* AppDelegate.m in Sources */,
+				7079C1281A42519900970528 /* Gif.m in Sources */,
+				7079C12B1A4251BF00970528 /* NetworkController.m in Sources */,
+				7076C6EB1A42279600927639 /* FLAnimatedImageView.m in Sources */,
 				70E3DB031A40FBF4009B1ED0 /* catDog.xcdatamodeld in Sources */,
 				70E3DB461A421C81009B1ED0 /* HomeViewController.m in Sources */,
 				70E3DAFD1A40FBF4009B1ED0 /* main.m in Sources */,
@@ -538,6 +571,7 @@
 				70E3DB1F1A40FBF4009B1ED0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70E3DB201A40FBF4009B1ED0 /* Build configuration list for PBXNativeTarget "catDogTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +580,7 @@
 				70E3DB221A40FBF4009B1ED0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

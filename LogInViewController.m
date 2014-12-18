@@ -8,6 +8,8 @@
 
 #import "LogInViewController.h"
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "FLAnimatedImage.h"
+#import "NetworkController.h"
 
 @interface LogInViewController ()
 
@@ -17,7 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    [[NetworkController alloc] fetchGifsWithSearchTerm:@"cat" completionHandler:^(NSError *error, NSMutableArray *response) {
+        NSLog(@"%@", response);
+    }];
+    
+    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://raphaelschaad.com/static/nyan.gif"]]];
+    FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
+    imageView.animatedImage = image;
+    imageView.frame = CGRectMake(100.0,100.0, 100.0, 100.0);
+    [self.view addSubview:imageView];
 
 }
 
