@@ -10,20 +10,20 @@
 
 @implementation Gif
 
--(id)init {
+- (id)init {
     self = [super init];
     return self;
 }
 
--(instancetype)initWithDictionary: (NSDictionary *)gifDictionary {
+- (instancetype)initWithDictionary: (NSDictionary *)gifDictionary {
     if (self == [super init]) {
-        NSDictionary *images = [gifDictionary valueForKey:@"images"];
-        self.gifURL = [images valueForKeyPath:@"fixed_height.url"];
+        NSDictionary *imagesDic = [gifDictionary valueForKey:@"images"];
+        self.gifURL = [imagesDic valueForKeyPath:@"original.url"];
     }
     return self;
 }
 
--(NSMutableArray *)parseJSONIntoGifs:(NSData *)rawJSONData {
+- (NSMutableArray *)parseJSONIntoGifs:(NSData *)rawJSONData {
     NSError *error = nil;
     NSMutableArray *gifs = [[NSMutableArray alloc] init];
     NSDictionary *searchJSONDict = [NSJSONSerialization JSONObjectWithData:rawJSONData options:0 error:&error];

@@ -10,8 +10,12 @@
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "FLAnimatedImage.h"
 #import "NetworkController.h"
+#import "Gif.h"
 
 @interface LogInViewController ()
+
+@property (strong,nonatomic) NSString *catGif;
+@property (strong,nonatomic) NSString *dogGif;
 
 @end
 
@@ -19,16 +23,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [[NetworkController alloc] fetchGifsWithSearchTerm:@"cat" completionHandler:^(NSError *error, NSMutableArray *response) {
-        NSLog(@"%@", response);
+        
+    [[NetworkController alloc] fetchGifsWithSearchTerm:@"cat" searchLimit:@"1" completionHandler:^(NSError *error, NSMutableArray *response) {
+        
+        Gif *gif = response[0];
+        self.catGif = gif.gifURL;
+        
+        FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.catGif]]];
+        FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
+        imageView.animatedImage = image;
+        imageView.frame = self.imageView.frame;
+        [self.view addSubview:imageView];
+        
     }];
     
-    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://raphaelschaad.com/static/nyan.gif"]]];
-    FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
-    imageView.animatedImage = image;
-    imageView.frame = CGRectMake(100.0,100.0, 100.0, 100.0);
-    [self.view addSubview:imageView];
 
 }
 
@@ -43,6 +51,7 @@
             [self performSegueWithIdentifier:@"SHOWHOME" sender:self];
         } else {
             NSLog(@"User logged in through Facebook");
+            [self performSegueWithIdentifier:@"SHOWHOME" sender:self];
         }
     }];
 }

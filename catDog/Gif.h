@@ -13,5 +13,6 @@
 @property (strong, nonatomic) NSString *gifURL;
 
 -(NSMutableArray *)parseJSONIntoGifs:(NSData *)rawJSONData;
+-(instancetype)initWithDictionary: (NSDictionary *)gifDictionary;
 
 @end

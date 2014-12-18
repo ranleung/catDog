@@ -14,7 +14,7 @@
 @property (strong, nonatomic) NSOperationQueue *operationQueue;
 
 + (instancetype)sharedManager;
--(void) fetchGifsWithSearchTerm:(NSString *)searchTerm completionHandler: (void (^)(NSError *error, NSMutableArray *response))completionHanlder;
+-(void) fetchGifsWithSearchTerm:(NSString *)searchTerm searchLimit:(NSString *)searchLimit completionHandler: (void (^)(NSError *error, NSMutableArray *response))completionHanlder;
 
 
 @end

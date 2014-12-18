@@ -18,7 +18,7 @@
 
 #pragma mark - Init Methods
 
--(id) init{
+-(id)init{
 
     return self;
 }
@@ -36,9 +36,9 @@
 
 #pragma mark - Fetch Methods
 
--(void) fetchGifsWithSearchTerm:(NSString *)searchTerm completionHandler: (void (^)(NSError *error, NSMutableArray *response))completionHanlder {
+-(void) fetchGifsWithSearchTerm:(NSString *)searchTerm searchLimit:(NSString *)searchLimit completionHandler: (void (^)(NSError *error, NSMutableArray *response))completionHanlder {
     
-    NSString *urlString = [NSString stringWithFormat:@"http://api.giphy.com/v1/gifs/search?q=%@&api_key=%@", searchTerm, kGiphyAPIKey];
+    NSString *urlString = [NSString stringWithFormat:@"http://api.giphy.com/v1/gifs/search?q=%@&limit=%@&api_key=%@", searchTerm, searchLimit, kGiphyAPIKey];
     NSURL *url = [[NSURL alloc] initWithString:urlString];
     
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
