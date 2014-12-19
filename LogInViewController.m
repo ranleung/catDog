@@ -24,7 +24,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
         
-    [[NetworkController alloc] fetchGifsWithSearchTerm:@"cat" searchLimit:@"1" completionHandler:^(NSError *error, NSMutableArray *response) {
+    [[NetworkController alloc] fetchGifsWithSearchTerm:@"cat" searchLimit:@"2" completionHandler:^(NSError *error, NSMutableArray *response) {
+        
+        Gif *gif = response[1];
+        self.catGif = gif.gifURL;
+        
+        FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.catGif]]];
+        FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
+        imageView.animatedImage = image;
+        imageView.frame = self.catImageView.frame;
+        [self.view addSubview:imageView];
+        
+    }];
+    
+    [[NetworkController alloc] fetchGifsWithSearchTerm:@"dog" searchLimit:@"1" completionHandler:^(NSError *error, NSMutableArray *response) {
         
         Gif *gif = response[0];
         self.catGif = gif.gifURL;
@@ -32,7 +45,7 @@
         FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.catGif]]];
         FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
         imageView.animatedImage = image;
-        imageView.frame = self.imageView.frame;
+        imageView.frame = self.dogImageView.frame;
         [self.view addSubview:imageView];
         
     }];
