@@ -15,6 +15,7 @@
 
 @interface CatViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic) NSArray *testArray;
 
 @end
 
@@ -30,8 +31,10 @@
        [self.tableView reloadData];
    }];
     
-    self.tableView.estimatedRowHeight = 87;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.testArray = @[@"Hello", @"Second", @"third"];
+    
+//    self.tableView.estimatedRowHeight = 200;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -42,19 +45,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.gifs.count;
+    return 2;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AnimalCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ANIMAL_CELL"];
+    AnimalCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ANIMAL_CELL"];
     Gif *gif = self.gifs[indexPath.row];
     
     FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:gif.gifURL]]];
-    FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
-    imageView.animatedImage = image;
-    imageView.frame = cell.imageView.frame;
-    [self.view addSubview:imageView];
+//    FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
+//    imageView.animatedImage = image;
+//    imageView.frame = cell.imageViewCell.frame;
+//    [cell addSubview:imageView];
+    
+    cell.imageViewCell.animatedImage = image;
 
+    //cell.testLabel.text = self.testArray[indexPath.row];
+    
     return cell;
 }
 

@@ -10,8 +10,6 @@
 
 @implementation AnimalCell
 
-//@synthesize imageView;
-
 - (void)awakeFromNib {
     // Initialization code
 }

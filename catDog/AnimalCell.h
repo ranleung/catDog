@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FLAnimatedImage.h"
 
 @interface AnimalCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) NSString *testString;
+@property (weak, nonatomic) IBOutlet FLAnimatedImageView *imageViewCell;
 
 @end
