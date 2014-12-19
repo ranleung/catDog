@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		70451F6F1A43DF080021D711 /* CatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70451F6E1A43DF080021D711 /* CatViewController.m */; };
-		70451F731A43DF1F0021D711 /* CatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70451F711A43DF1F0021D711 /* CatCell.m */; };
-		70451F741A43DF1F0021D711 /* CatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70451F721A43DF1F0021D711 /* CatCell.xib */; };
+		70451F781A440A810021D711 /* AnimalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70451F761A440A810021D711 /* AnimalCell.m */; };
+		70451F791A440A810021D711 /* AnimalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70451F771A440A810021D711 /* AnimalCell.xib */; };
 		7076C6EA1A42279600927639 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076C6E71A42279600927639 /* FLAnimatedImage.m */; };
 		7076C6EB1A42279600927639 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076C6E91A42279600927639 /* FLAnimatedImageView.m */; };
 		7079C1281A42519900970528 /* Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = 7079C1271A42519900970528 /* Gif.m */; };
@@ -54,9 +54,9 @@
 /* Begin PBXFileReference section */
 		70451F6D1A43DF080021D711 /* CatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatViewController.h; sourceTree = "<group>"; };
 		70451F6E1A43DF080021D711 /* CatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatViewController.m; sourceTree = "<group>"; };
-		70451F701A43DF1F0021D711 /* CatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatCell.h; sourceTree = "<group>"; };
-		70451F711A43DF1F0021D711 /* CatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatCell.m; sourceTree = "<group>"; };
-		70451F721A43DF1F0021D711 /* CatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatCell.xib; sourceTree = "<group>"; };
+		70451F751A440A810021D711 /* AnimalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalCell.h; sourceTree = "<group>"; };
+		70451F761A440A810021D711 /* AnimalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalCell.m; sourceTree = "<group>"; };
+		70451F771A440A810021D711 /* AnimalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimalCell.xib; sourceTree = "<group>"; };
 		7076C6E61A42279600927639 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
 		7076C6E71A42279600927639 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
 		7076C6E81A42279600927639 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
@@ -219,9 +219,9 @@
 		70E3DB481A421C92009B1ED0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				70451F701A43DF1F0021D711 /* CatCell.h */,
-				70451F711A43DF1F0021D711 /* CatCell.m */,
-				70451F721A43DF1F0021D711 /* CatCell.xib */,
+				70451F751A440A810021D711 /* AnimalCell.h */,
+				70451F761A440A810021D711 /* AnimalCell.m */,
+				70451F771A440A810021D711 /* AnimalCell.xib */,
 				70E3DB071A40FBF4009B1ED0 /* Main.storyboard */,
 				70E3DB0C1A40FBF4009B1ED0 /* LaunchScreen.xib */,
 			);
@@ -354,8 +354,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70451F741A43DF1F0021D711 /* CatCell.xib in Resources */,
 				70E3DB091A40FBF4009B1ED0 /* Main.storyboard in Resources */,
+				70451F791A440A810021D711 /* AnimalCell.xib in Resources */,
 				70E3DB0E1A40FBF4009B1ED0 /* LaunchScreen.xib in Resources */,
 				70E3DB0B1A40FBF4009B1ED0 /* Images.xcassets in Resources */,
 			);
@@ -383,10 +383,10 @@
 				7079C12B1A4251BF00970528 /* NetworkController.m in Sources */,
 				7076C6EB1A42279600927639 /* FLAnimatedImageView.m in Sources */,
 				70E3DB031A40FBF4009B1ED0 /* catDog.xcdatamodeld in Sources */,
-				70451F731A43DF1F0021D711 /* CatCell.m in Sources */,
 				70E3DB461A421C81009B1ED0 /* HomeViewController.m in Sources */,
 				70E3DAFD1A40FBF4009B1ED0 /* main.m in Sources */,
 				70E3DB4E1A42217E009B1ED0 /* Constants.m in Sources */,
+				70451F781A440A810021D711 /* AnimalCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import "CatViewController.h"
-#import "CatCell.h"
+#import "AnimalCell.h"
 #import "HomeViewController.h"
 #import "NetworkController.h"
 #import "Gif.h"
@@ -46,7 +46,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CAT_CELL"];
+    AnimalCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CAT_CELL"];
     Gif *gif = self.gifs[indexPath.row];
     
     FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:gif.gifURL]]];

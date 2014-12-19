@@ -1,14 +1,14 @@
 //
-//  CatCell.m
+//  AnimalCell.m
 //  catDog
 //
 //  Created by Randall Leung on 12/18/14.
 //  Copyright (c) 2014 Randall Leung. All rights reserved.
 //
 
-#import "CatCell.h"
+#import "AnimalCell.h"
 
-@implementation CatCell
+@implementation AnimalCell
 
 - (void)awakeFromNib {
     // Initialization code
