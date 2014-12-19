@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "CatViewController.h"
 
 @interface HomeViewController ()
 
@@ -21,6 +22,9 @@
 
 - (IBAction)catButton:(id)sender {
     NSLog(@"Cat");
+    
+    CatViewController *catVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CatViewController"];
+    [self presentViewController:catVC animated:true completion:nil];
 }
 
 - (IBAction)dogButton:(id)sender {

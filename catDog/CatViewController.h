@@ -1,5 +1,5 @@
 //
-//  CatTableViewController.h
+//  CatViewController.h
 //  catDog
 //
 //  Created by Randall Leung on 12/18/14.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CatTableViewController : UITableViewController
+@interface CatViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
