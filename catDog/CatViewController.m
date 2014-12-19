@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[self tableView] registerNib:[UINib nibWithNibName:@"CatCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"CAT_CELL"];
+    [[self tableView] registerNib:[UINib nibWithNibName:@"AnimalCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"ANIMAL_CELL"];
     
    [[NetworkController alloc] fetchGifsWithSearchTerm:@"cat" searchLimit:@"10" completionHandler:^(NSError *error, NSMutableArray *response) {
        self.gifs = response;
@@ -46,7 +46,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    AnimalCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CAT_CELL"];
+    AnimalCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ANIMAL_CELL"];
     Gif *gif = self.gifs[indexPath.row];
     
     FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:gif.gifURL]]];
@@ -54,7 +54,6 @@
     imageView.animatedImage = image;
     imageView.frame = cell.imageView.frame;
     [self.view addSubview:imageView];
-    
 
     return cell;
 }
