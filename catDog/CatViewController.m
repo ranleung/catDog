@@ -15,7 +15,7 @@
 
 @interface CatViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) NSArray *testArray;
+@property (strong, nonatomic) NSOperationQueue *imageQueue;
 
 @end
 
@@ -26,15 +26,13 @@
     
     [[self tableView] registerNib:[UINib nibWithNibName:@"AnimalCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"ANIMAL_CELL"];
     
-   [[NetworkController alloc] fetchGifsWithSearchTerm:@"cat" searchLimit:@"10" completionHandler:^(NSError *error, NSMutableArray *response) {
+   [[NetworkController alloc] fetchGifsWithSearchTerm:@"cat" searchLimit:@"5" completionHandler:^(NSError *error, NSMutableArray *response) {
        self.gifs = response;
        [self.tableView reloadData];
    }];
     
-    self.testArray = @[@"Hello", @"Second", @"third"];
-    
-//    self.tableView.estimatedRowHeight = 200;
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+//    self.tableView.estimatedRowHeight = 300;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -45,22 +43,25 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return self.gifs.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AnimalCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ANIMAL_CELL"];
+    cell.activityInd.hidden = NO;
+    [cell.activityInd startAnimating];
+    
     Gif *gif = self.gifs[indexPath.row];
+    [self.imageQueue addOperationWithBlock:^{
+        FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:gif.gifURL]]];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            cell.imageViewCell.animatedImage = image;
+        }];
+    }];
     
-    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:gif.gifURL]]];
-//    FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
-//    imageView.animatedImage = image;
-//    imageView.frame = cell.imageViewCell.frame;
-//    [cell addSubview:imageView];
     
-    cell.imageViewCell.animatedImage = image;
-
-    //cell.testLabel.text = self.testArray[indexPath.row];
+    [cell.activityInd stopAnimating];
+    cell.activityInd.hidden = YES;
     
     return cell;
 }

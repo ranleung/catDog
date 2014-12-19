@@ -174,19 +174,19 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HnN-P2-tSL">
-                                <rect key="frame" x="0.0" y="72" width="375" height="813"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.82352941180000006" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="cj9-nF-sXT" firstAttribute="top" secondItem="yTe-ij-43h" secondAttribute="bottom" constant="8" id="ADW-jP-5gO"/>
-                            <constraint firstItem="HnN-P2-tSL" firstAttribute="top" secondItem="cj9-nF-sXT" secondAttribute="bottom" id="JIs-lQ-HYo"/>
-                            <constraint firstItem="cj9-nF-sXT" firstAttribute="leading" secondItem="HnN-P2-tSL" secondAttribute="leading" id="bg4-pi-9MM"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="HnN-P2-tSL" secondAttribute="bottom" constant="-218" id="hpu-a0-qdk"/>
-                            <constraint firstItem="HnN-P2-tSL" firstAttribute="leading" secondItem="qbw-4i-lx5" secondAttribute="leadingMargin" constant="-16" id="jjF-LS-Mky"/>
-                            <constraint firstItem="cj9-nF-sXT" firstAttribute="trailing" secondItem="HnN-P2-tSL" secondAttribute="trailing" id="n4E-Go-fqR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HnN-P2-tSL" secondAttribute="trailing" constant="-16" id="yG3-aU-ZNF"/>
+                            <constraint firstItem="HnN-P2-tSL" firstAttribute="leading" secondItem="qbw-4i-lx5" secondAttribute="leadingMargin" constant="-16" id="EJp-gL-Pxu"/>
+                            <constraint firstItem="cj9-nF-sXT" firstAttribute="leading" secondItem="qbw-4i-lx5" secondAttribute="leading" id="FsO-Eg-EZ6"/>
+                            <constraint firstAttribute="trailing" secondItem="cj9-nF-sXT" secondAttribute="trailing" id="PUy-Sl-b2z"/>
+                            <constraint firstItem="HnN-P2-tSL" firstAttribute="top" secondItem="cj9-nF-sXT" secondAttribute="bottom" id="SFo-EZ-Pd7"/>
+                            <constraint firstItem="nzO-wr-hDY" firstAttribute="top" secondItem="HnN-P2-tSL" secondAttribute="bottom" id="hl5-AJ-aTi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HnN-P2-tSL" secondAttribute="trailing" constant="-16" id="mJa-T6-6XO"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
