@@ -7,33 +7,45 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ANIMAL_CELL" rowHeight="300" id="XLX-5c-XZq" customClass="AnimalCell">
-            <rect key="frame" x="0.0" y="0.0" width="440" height="243"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ANIMAL_CELL" rowHeight="237" id="tBP-gF-Nti" customClass="AnimalCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="237"/>
             <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XLX-5c-XZq" id="9FY-23-cgy">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tBP-gF-Nti" id="oqg-PT-ckV">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="BQW-14-rDs" customClass="FLAnimatedImageView">
-                        <rect key="frame" x="18" y="18" width="404" height="206.5"/>
-                    </imageView>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ddd-hX-J9W">
-                        <rect key="frame" x="210" y="112" width="20" height="20"/>
-                    </activityIndicatorView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enT-gR-166">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat.png" translatesAutoresizingMaskIntoConstraints="NO" id="XhD-JN-ct7" customClass="FLAnimatedImageView">
+                                <rect key="frame" x="30" y="10" width="315" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="KtQ-b1-lAS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XhD-JN-ct7" firstAttribute="leading" secondItem="enT-gR-166" secondAttribute="leading" constant="30" id="F0z-ZK-Yr0"/>
+                            <constraint firstItem="XhD-JN-ct7" firstAttribute="top" secondItem="enT-gR-166" secondAttribute="top" constant="10" id="LvU-SM-hOQ"/>
+                            <constraint firstAttribute="bottom" secondItem="XhD-JN-ct7" secondAttribute="bottom" constant="76.5" id="pO1-ei-lbV"/>
+                            <constraint firstAttribute="trailing" secondItem="XhD-JN-ct7" secondAttribute="trailing" constant="30" id="wn4-6T-agR"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="BQW-14-rDs" firstAttribute="top" secondItem="9FY-23-cgy" secondAttribute="topMargin" constant="10" id="2Ag-yL-1FV"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="BQW-14-rDs" secondAttribute="bottom" constant="10" id="4jb-jQ-xkT"/>
-                    <constraint firstAttribute="centerX" secondItem="ddd-hX-J9W" secondAttribute="centerX" id="GsW-O3-NCu"/>
-                    <constraint firstAttribute="centerY" secondItem="ddd-hX-J9W" secondAttribute="centerY" id="LFl-jN-fBy"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="BQW-14-rDs" secondAttribute="trailing" constant="10" id="gC2-Ag-Neq"/>
-                    <constraint firstItem="BQW-14-rDs" firstAttribute="leading" secondItem="9FY-23-cgy" secondAttribute="leadingMargin" constant="10" id="yrb-eQ-vYL"/>
+                    <constraint firstItem="enT-gR-166" firstAttribute="top" secondItem="oqg-PT-ckV" secondAttribute="topMargin" constant="-8" id="IEO-tC-8fb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="enT-gR-166" secondAttribute="bottom" constant="-8" id="aQr-dk-Nrd"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="enT-gR-166" secondAttribute="trailing" constant="-8" id="icw-fb-EyB"/>
+                    <constraint firstItem="enT-gR-166" firstAttribute="leading" secondItem="oqg-PT-ckV" secondAttribute="leadingMargin" constant="-8" id="s3C-M7-ow3"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="activityInd" destination="ddd-hX-J9W" id="mkn-b4-qIO"/>
-                <outlet property="imageViewCell" destination="BQW-14-rDs" id="pOg-vm-Ova"/>
+                <outlet property="imageViewCell" destination="XhD-JN-ct7" id="4ZE-V7-dAb"/>
             </connections>
-            <point key="canvasLocation" x="378" y="373.5"/>
+            <point key="canvasLocation" x="295.5" y="424.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="cat.png" width="1442" height="788"/>
+    </resources>
 </document>

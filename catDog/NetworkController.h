@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FLAnimatedImage.h"
 
 @interface NetworkController : NSObject
 
@@ -15,6 +16,7 @@
 
 + (instancetype)sharedManager;
 -(void) fetchGifsWithSearchTerm:(NSString *)searchTerm searchLimit:(NSString *)searchLimit completionHandler: (void (^)(NSError *error, NSMutableArray *response))completionHanlder;
+-(void) downloadImageForGifs:(NSString *)gifURL completionHandler:(void (^)(NSError *error, FLAnimatedImage *image))completionHandler;
 
 
 @end

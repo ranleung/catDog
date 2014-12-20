@@ -16,6 +16,7 @@
 
 @property (strong,nonatomic) NSString *catGif;
 @property (strong,nonatomic) NSString *dogGif;
+@property (weak, nonatomic) NetworkController *sharedManager;
 
 @end
 
@@ -23,8 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.sharedManager = [NetworkController sharedManager];
         
-    [[NetworkController alloc] fetchGifsWithSearchTerm:@"cat" searchLimit:@"2" completionHandler:^(NSError *error, NSMutableArray *response) {
+    [self.sharedManager fetchGifsWithSearchTerm:@"cat" searchLimit:@"2" completionHandler:^(NSError *error, NSMutableArray *response) {
         
         Gif *gif = response[1];
         self.catGif = gif.gifURL;
@@ -37,7 +40,7 @@
         
     }];
     
-    [[NetworkController alloc] fetchGifsWithSearchTerm:@"dog" searchLimit:@"1" completionHandler:^(NSError *error, NSMutableArray *response) {
+    [self.sharedManager fetchGifsWithSearchTerm:@"dog" searchLimit:@"1" completionHandler:^(NSError *error, NSMutableArray *response) {
         
         Gif *gif = response[0];
         self.catGif = gif.gifURL;

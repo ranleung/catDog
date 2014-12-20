@@ -11,8 +11,6 @@
 
 @interface AnimalCell : UITableViewCell
 
-@property (strong, nonatomic) NSString *testString;
 @property (weak, nonatomic) IBOutlet FLAnimatedImageView *imageViewCell;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityInd;
 
 @end

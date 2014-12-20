@@ -10,6 +10,10 @@
 		70451F6F1A43DF080021D711 /* CatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70451F6E1A43DF080021D711 /* CatViewController.m */; };
 		70451F781A440A810021D711 /* AnimalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70451F761A440A810021D711 /* AnimalCell.m */; };
 		70451F791A440A810021D711 /* AnimalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70451F771A440A810021D711 /* AnimalCell.xib */; };
+		704A727F1A44EBB2006FD15B /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 704A727A1A44EBB2006FD15B /* SVIndefiniteAnimatedView.m */; };
+		704A72801A44EBB2006FD15B /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 704A727C1A44EBB2006FD15B /* SVProgressHUD.bundle */; };
+		704A72811A44EBB2006FD15B /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 704A727E1A44EBB2006FD15B /* SVProgressHUD.m */; };
+		704A72831A44EEF3006FD15B /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 704A72821A44EEF3006FD15B /* cat.png */; };
 		7076C6EA1A42279600927639 /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076C6E71A42279600927639 /* FLAnimatedImage.m */; };
 		7076C6EB1A42279600927639 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076C6E91A42279600927639 /* FLAnimatedImageView.m */; };
 		7079C1281A42519900970528 /* Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = 7079C1271A42519900970528 /* Gif.m */; };
@@ -57,6 +61,13 @@
 		70451F751A440A810021D711 /* AnimalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimalCell.h; sourceTree = "<group>"; };
 		70451F761A440A810021D711 /* AnimalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimalCell.m; sourceTree = "<group>"; };
 		70451F771A440A810021D711 /* AnimalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimalCell.xib; sourceTree = "<group>"; };
+		704A72791A44EBB2006FD15B /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		704A727A1A44EBB2006FD15B /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		704A727B1A44EBB2006FD15B /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		704A727C1A44EBB2006FD15B /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		704A727D1A44EBB2006FD15B /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		704A727E1A44EBB2006FD15B /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		704A72821A44EEF3006FD15B /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		7076C6E61A42279600927639 /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
 		7076C6E71A42279600927639 /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
 		7076C6E81A42279600927639 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
@@ -133,6 +144,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		704A72781A44EBB2006FD15B /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				704A72791A44EBB2006FD15B /* SVIndefiniteAnimatedView.h */,
+				704A727A1A44EBB2006FD15B /* SVIndefiniteAnimatedView.m */,
+				704A727B1A44EBB2006FD15B /* SVProgressHUD-Prefix.pch */,
+				704A727C1A44EBB2006FD15B /* SVProgressHUD.bundle */,
+				704A727D1A44EBB2006FD15B /* SVProgressHUD.h */,
+				704A727E1A44EBB2006FD15B /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		7076C6E51A42279600927639 /* FLAnimatedImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +243,7 @@
 		70E3DB481A421C92009B1ED0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				704A72821A44EEF3006FD15B /* cat.png */,
 				70451F751A440A810021D711 /* AnimalCell.h */,
 				70451F761A440A810021D711 /* AnimalCell.m */,
 				70451F771A440A810021D711 /* AnimalCell.xib */,
@@ -255,6 +280,7 @@
 		70E3DB4B1A421CD2009B1ED0 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				704A72781A44EBB2006FD15B /* SVProgressHUD */,
 				70E3DB3F1A40FD4E009B1ED0 /* libsqlite3.dylib */,
 				70E3DB3D1A40FCE0009B1ED0 /* FacebookSDK.framework */,
 				70E3DB3B1A40FCD0009B1ED0 /* AudioToolbox.framework */,
@@ -354,6 +380,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704A72831A44EEF3006FD15B /* cat.png in Resources */,
+				704A72801A44EBB2006FD15B /* SVProgressHUD.bundle in Resources */,
 				70E3DB091A40FBF4009B1ED0 /* Main.storyboard in Resources */,
 				70451F791A440A810021D711 /* AnimalCell.xib in Resources */,
 				70E3DB0E1A40FBF4009B1ED0 /* LaunchScreen.xib in Resources */,
@@ -376,7 +404,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E3DB431A4114CE009B1ED0 /* LogInViewController.m in Sources */,
+				704A727F1A44EBB2006FD15B /* SVIndefiniteAnimatedView.m in Sources */,
 				7076C6EA1A42279600927639 /* FLAnimatedImage.m in Sources */,
+				704A72811A44EBB2006FD15B /* SVProgressHUD.m in Sources */,
 				70451F6F1A43DF080021D711 /* CatViewController.m in Sources */,
 				70E3DB001A40FBF4009B1ED0 /* AppDelegate.m in Sources */,
 				7079C1281A42519900970528 /* Gif.m in Sources */,

@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FLAnimatedImage.h"
 
 @interface Gif : NSObject
 
 @property (strong, nonatomic) NSString *gifURL;
+@property (strong, nonatomic) FLAnimatedImage *gifImage;
 
 -(NSMutableArray *)parseJSONIntoGifs:(NSData *)rawJSONData;
 -(instancetype)initWithDictionary: (NSDictionary *)gifDictionary;

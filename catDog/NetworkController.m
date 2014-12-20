@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "Gif.h"
 
+
 @interface NetworkController()
 
 @end
@@ -70,9 +71,20 @@
         }
     }];
     [dataTask resume];
+}
+
+-(void) downloadImageForGifs:(NSString *)gifURL completionHandler:(void (^)(NSError *error, FLAnimatedImage *image))completionHandler {
+    NSURL *url = [NSURL URLWithString:gifURL];
     
-    
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+        NSData *imageData = [NSData dataWithContentsOfURL:url];
+        FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:imageData];
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            completionHandler(nil,image);
+        });
+    });
     
 }
+
 
 @end
