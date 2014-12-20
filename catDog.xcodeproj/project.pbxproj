@@ -18,6 +18,7 @@
 		7076C6EB1A42279600927639 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076C6E91A42279600927639 /* FLAnimatedImageView.m */; };
 		7079C1281A42519900970528 /* Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = 7079C1271A42519900970528 /* Gif.m */; };
 		7079C12B1A4251BF00970528 /* NetworkController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7079C12A1A4251BF00970528 /* NetworkController.m */; };
+		70930EE01A45F29A00B9C19A /* DogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70930EDF1A45F29A00B9C19A /* DogViewController.m */; };
 		70E3DAFD1A40FBF4009B1ED0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3DAFC1A40FBF4009B1ED0 /* main.m */; };
 		70E3DB001A40FBF4009B1ED0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E3DAFF1A40FBF4009B1ED0 /* AppDelegate.m */; };
 		70E3DB031A40FBF4009B1ED0 /* catDog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70E3DB011A40FBF4009B1ED0 /* catDog.xcdatamodeld */; };
@@ -76,6 +77,8 @@
 		7079C1271A42519900970528 /* Gif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gif.m; sourceTree = "<group>"; };
 		7079C1291A4251BF00970528 /* NetworkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkController.h; sourceTree = "<group>"; };
 		7079C12A1A4251BF00970528 /* NetworkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkController.m; sourceTree = "<group>"; };
+		70930EDE1A45F29A00B9C19A /* DogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogViewController.h; sourceTree = "<group>"; };
+		70930EDF1A45F29A00B9C19A /* DogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogViewController.m; sourceTree = "<group>"; };
 		70E3DAF71A40FBF4009B1ED0 /* catDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E3DAFB1A40FBF4009B1ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70E3DAFC1A40FBF4009B1ED0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				70E3DB451A421C81009B1ED0 /* HomeViewController.m */,
 				70451F6D1A43DF080021D711 /* CatViewController.h */,
 				70451F6E1A43DF080021D711 /* CatViewController.m */,
+				70930EDE1A45F29A00B9C19A /* DogViewController.h */,
+				70930EDF1A45F29A00B9C19A /* DogViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				70E3DB031A40FBF4009B1ED0 /* catDog.xcdatamodeld in Sources */,
 				70E3DB461A421C81009B1ED0 /* HomeViewController.m in Sources */,
 				70E3DAFD1A40FBF4009B1ED0 /* main.m in Sources */,
+				70930EE01A45F29A00B9C19A /* DogViewController.m in Sources */,
 				70E3DB4E1A42217E009B1ED0 /* Constants.m in Sources */,
 				70451F781A440A810021D711 /* AnimalCell.m in Sources */,
 			);

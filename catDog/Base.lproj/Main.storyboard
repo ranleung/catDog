@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu8-RZ-7Ua">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu8-RZ-7Ua">
                                 <rect key="frame" x="26" y="580" width="323" height="47"/>
                                 <state key="normal" image="facebook-login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,7 +41,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CatDog" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g15-9H-Ild">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CatDog" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g15-9H-Ild">
                                 <rect key="frame" x="16" y="271" width="343" height="47"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
                                 <color key="textColor" red="0.094117647060000004" green="0.37254901959999998" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -146,7 +146,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZL-YF-EAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851.5" y="239.5"/>
+            <point key="canvasLocation" x="899.5" y="322.5"/>
+        </scene>
+        <!--Dog View Controller-->
+        <scene sceneID="uma-xK-z9P">
+            <objects>
+                <viewController storyboardIdentifier="DogViewController" id="OeC-ed-oY8" customClass="DogViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ocS-Ih-Kiz"/>
+                        <viewControllerLayoutGuide type="bottom" id="hfu-28-4LO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zTL-nf-HJe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBy-QN-NZY">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <color key="barTintColor" red="0.99607843139999996" green="0.82352941180000006" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Dog Gifs" id="vr8-nR-jIf">
+                                        <barButtonItem key="leftBarButtonItem" image="back" id="2oa-f4-9t5">
+                                            <color key="tintColor" red="0.18823529410000001" green="0.72941176470000002" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="backButton:" destination="OeC-ed-oY8" id="hga-MP-KWQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="60G-1T-w22">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843139999996" green="0.82352941180000006" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="60G-1T-w22" secondAttribute="trailing" constant="-16" id="MFJ-IV-p2E"/>
+                            <constraint firstItem="60G-1T-w22" firstAttribute="leading" secondItem="zTL-nf-HJe" secondAttribute="leadingMargin" constant="-16" id="Mtz-dS-L43"/>
+                            <constraint firstItem="hfu-28-4LO" firstAttribute="top" secondItem="60G-1T-w22" secondAttribute="bottom" id="QSw-Fh-63Z"/>
+                            <constraint firstItem="60G-1T-w22" firstAttribute="top" secondItem="HBy-QN-NZY" secondAttribute="bottom" id="Rpp-tK-oNk"/>
+                            <constraint firstItem="HBy-QN-NZY" firstAttribute="leading" secondItem="zTL-nf-HJe" secondAttribute="leadingMargin" constant="-16" id="ZPh-2l-4Zi"/>
+                            <constraint firstItem="HBy-QN-NZY" firstAttribute="top" secondItem="ocS-Ih-Kiz" secondAttribute="bottom" constant="8" id="q9R-Tb-fgF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HBy-QN-NZY" secondAttribute="trailing" constant="-16" id="ref-Rr-U7Q"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="60G-1T-w22" id="9OU-MJ-7Rb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wP7-Th-fdn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407.5" y="711.5"/>
         </scene>
         <!--Cat View Controller-->
         <scene sceneID="wLV-nv-fAJ">
@@ -165,7 +216,8 @@
                                 <color key="barTintColor" red="0.99607843139999996" green="0.82352941180000006" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Cat Gifs" id="Aoq-Q1-fqZ">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="jk5-dQ-paY">
+                                        <barButtonItem key="leftBarButtonItem" image="back" id="jk5-dQ-paY">
+                                            <color key="tintColor" red="0.94117647059999998" green="0.08235294118" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="backButton:" destination="xHt-sJ-sOP" id="hZp-Yo-W16"/>
                                             </connections>
@@ -196,10 +248,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bks-oA-s1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306.5" y="239.5"/>
+            <point key="canvasLocation" x="1407.5" y="-22.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="24" height="24"/>
         <image name="facebook-login" width="351" height="47"/>
     </resources>
 </document>
