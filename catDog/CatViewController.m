@@ -11,13 +11,15 @@
 #import "HomeViewController.h"
 #import "NetworkController.h"
 #import "Gif.h"
-#import "FLAnimatedImage.h"
 #import "SVProgressHUD.h"
 
 @interface CatViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSOperationQueue *imageQueue;
 @property (weak, nonatomic) NetworkController *sharedManager;
+@property (strong, nonatomic) NSArray *gifs;
+@property (strong, nonatomic) NSCache *imageCache;
+
 
 @end
 
@@ -30,13 +32,15 @@
     
     [[self tableView] registerNib:[UINib nibWithNibName:@"AnimalCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"ANIMAL_CELL"];
     
-   [[NetworkController alloc] fetchGifsWithSearchTerm:@"dog" searchLimit:@"5" completionHandler:^(NSError *error, NSMutableArray *response) {
+   [[NetworkController alloc] fetchGifsWithSearchTerm:@"cat" searchLimit:@"5" completionHandler:^(NSError *error, NSMutableArray *response) {
        self.gifs = response;
        [self.tableView reloadData];
    }];
     
 //    self.tableView.estimatedRowHeight = 300;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    self.imageCache = [[NSCache alloc] init];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -63,15 +67,13 @@
     NSInteger currentTag = cell.tag + 1;
     cell.tag = currentTag;
     
-    if (gif.gifImage != nil) {
-        cell.imageViewCell.animatedImage = gif.gifImage;
+    if ([self.imageCache objectForKey:gif.gifURL]) {
+        cell.imageViewCell.animatedImage = [self.imageCache objectForKey:gif.gifURL];
     } else {
-        [SVProgressHUD show];
         [self.sharedManager downloadImageForGifs:gif.gifURL completionHandler:^(NSError *error, FLAnimatedImage *image) {
             if ([self.tableView cellForRowAtIndexPath:indexPath]) {
                 if (cell.tag == currentTag) {
-                    [SVProgressHUD dismiss];
-                    gif.gifImage = image;
+                    [self.imageCache setObject:image forKey:gif.gifURL];
                     cell.imageViewCell.animatedImage = image;
                 }
             }
